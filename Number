@@ -1,0 +1,50 @@
+/* Write a do-while loop that asks the user to enter two numbers. 
+The numbers should be added and the sum displayed. 
+The loop should ask the user whether he or she wishes to perform the operation again. 
+If so, the loop should repeat; otherwise it should terminate.*/
+
+package anudip;
+
+import java.util.Scanner;
+
+public class Num {
+	
+	 
+	    public static void main(String[] args) {
+	    	
+	    	//input from the user
+	    	
+	        Scanner scanner = new Scanner(System.in);
+	        
+	        char repeat;//data member
+
+	        do {
+	        	
+	            // Ask the user to enter two numbers
+	        	
+	            System.out.print("Enter the first number: ");
+	            int num1 = scanner.nextInt();
+
+	            System.out.print("Enter the second number: ");
+	            int num2 = scanner.nextInt();
+
+	            // Calculate and display the sum
+	            
+	            int sum = num1 + num2;
+	            System.out.println("Sum: " + sum);
+
+	            // Ask the user whether to repeat the operation
+	            
+	            System.out.print("Do you want to perform the operation again? (y/n): ");
+	            repeat = scanner.next().charAt(0);
+
+	        } while (repeat == 'y' || repeat == 'Y');
+	        
+	        //if yes it will ask the numbers again if not it will exit by saying bye.
+
+	        System.out.println("bye!");
+	        scanner.close();//close the scanner class
+	    }
+
+
+}
